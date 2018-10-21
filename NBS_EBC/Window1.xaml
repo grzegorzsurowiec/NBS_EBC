@@ -1,0 +1,51 @@
+﻿<Window x:Class="NBS_EBC.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NBS_EBC"
+        mc:Ignorable="d"
+        Title="Kursy Walut - Grzegorz Surowiec 2013-2017" Width="410" Height="450" WindowStyle="ToolWindow" ResizeMode="NoResize" Icon="icon_512.ico">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="340*"/>
+            <RowDefinition Height="110"/>
+        </Grid.RowDefinitions>
+        <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="0">
+            <Calendar x:Name="cKalendarz"  SelectedDatesChanged="cKalendarz_SelectedDatesChanged" HorizontalAlignment="Left"
+              VerticalAlignment="Top"/>
+        </Viewbox>
+
+
+        <StackPanel Orientation="Vertical" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="pKursSE" Visibility="Hidden">
+                <TextBlock Text="tab. NBS:     1 € =" FontWeight="Bold" FontSize="16" Margin="15,0,0,0"/>
+                <TextBlock Foreground="Red" Text="" FontWeight="Bold" FontSize="16" x:Name="lKursSE" Margin="10,0,0,0"/>
+                <TextBlock Text="(" FontWeight="Bold" FontSize="16" Margin="10,0,0,0"/>
+                <TextBlock Foreground="Gray" Text="" FontWeight="Bold" FontSize="16" x:Name="lDzienSE" Margin="10,0,0,0"/>
+                <TextBlock Text=")" FontWeight="Bold" FontSize="16" Margin="10,0,0,0"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" x:Name="pKursKC" Visibility="Hidden">
+                <TextBlock Text="tab. NBP: 1 czk =" FontWeight="Bold" FontSize="16" Margin="15,0,0,0"/>
+                <TextBlock Foreground="Red" Text="" FontWeight="Bold" FontSize="16" x:Name="lKursKC" Margin="10,0,0,0"/>
+                <TextBlock Text="(" FontWeight="Bold" FontSize="16" Margin="10,0,0,0"/>
+                <TextBlock Foreground="Gray" Text="" FontWeight="Bold" FontSize="16" x:Name="lDzienKC" Margin="10,0,0,0"/>
+                <TextBlock Text=")" FontWeight="Bold" FontSize="16" Margin="10,0,0,0"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="pKursPLBC" Visibility="Hidden" ToolTip="Kurs Banku Czeskiego">
+                <TextBlock Text="tab. NBC:    1 zł =" FontWeight="Bold" FontSize="16" Margin="15,0,0,0"/>
+                <TextBlock Foreground="Red" Text="" FontWeight="Bold" FontSize="16" x:Name="lKursPLBC" Margin="10,0,0,0"/>
+                <TextBlock Text="(" FontWeight="Bold" FontSize="16" Margin="10,0,0,0"/>
+                <TextBlock Foreground="Gray" Text="" FontWeight="Bold" FontSize="16" x:Name="lDzienPLBC" Margin="10,0,0,0"/>
+                <TextBlock Text=")" FontWeight="Bold" FontSize="16" Margin="10,0,0,0"/>
+            </StackPanel>
+
+        </StackPanel>
+            
+
+
+
+    </Grid>
+</Window>
